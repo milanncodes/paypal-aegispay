@@ -5,8 +5,9 @@ export const dynamic = 'force-dynamic';
 /**
  * GET /api/health
  *
- * Health check probe reporting system readiness across the Policy Engine,
- * isolated AI Evaluator, PayPal Sandbox client, and AG Grid ledger.
+ * Robust, zero-dependency health probe reporting readiness across
+ * the Policy Engine, isolated AI Evaluator, PayPal Sandbox client,
+ * and AG Grid ledger.
  */
 export async function GET() {
   const isAiLive = Boolean(process.env.OPENAI_API_KEY && process.env.OPENAI_API_KEY.trim());
@@ -23,12 +24,12 @@ export async function GET() {
       timestamp: new Date().toISOString(),
       environment: process.env.PAYPAL_MODE || 'sandbox',
       components: {
-        frontend: 'operational',
         policyEngine: 'operational',
-        aiEvaluator: isAiLive ? 'live_llm' : 'offline_fallback',
-        paypalClient: isPayPalConfigured ? 'configured' : 'mock_sandbox',
+        aiEvaluator: isAiLive ? 'live_llm' : 'offline_fallback_ready',
+        paypalClient: isPayPalConfigured ? 'configured' : 'mock_sandbox_ready',
         agGridLedger: 'operational',
       },
+      zeroConfigDemo: true,
       version: '1.0.0',
     },
     { status: 200 }
