@@ -1,0 +1,41 @@
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom AG Grid Dark Theme overrides for seamless B2B Fintech styling */
+.ag-theme-alpine-dark {
+  --ag-background-color: rgb(15 23 42 / 0.7);
+  --ag-header-background-color: rgb(15 23 42 / 0.95);
+  --ag-odd-row-background-color: rgb(2 6 23 / 0.35);
+  --ag-border-color: rgb(30 41 59);
+  --ag-row-hover-color: rgb(30 41 59 / 0.5);
+  --ag-font-family: inherit;
+  --ag-font-size: 13px;
+  --ag-header-foreground-color: rgb(148 163 184);
+  --ag-data-color: rgb(241 245 249);
+}
+
+.ag-theme-alpine-dark .ag-root-wrapper {
+  border-radius: 0.5rem;
+  border: 1px solid rgb(30 41 59);
+}
+
+/* High-visibility cell flashing on status change */
+.ag-theme-alpine-dark .ag-cell-data-changed {
+  background-color: rgb(16 185 129 / 0.35) !important;
+  transition: background-color 1.2s ease-in-out;
+}
+
+.ag-theme-alpine-dark .ag-cell-data-changed-animation {
+  background-color: transparent;
+  transition: background-color 1.2s ease-in-out;
+}
+
+/* Pinned Bottom Summary Row Accent */
+.ag-theme-alpine-dark .ag-floating-bottom {
+  background-color: rgb(2 6 23 / 0.9) !important;
+  border-top: 2px solid rgb(16 185 129 / 0.4) !important;
+}

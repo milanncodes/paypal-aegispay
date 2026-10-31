@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aegispay-app
+    working_dir: /app
+    volumes:
+      # Mount current working directory for live code reloading
+      - .:/app
+      # Preserve container node_modules from being overridden by host directory
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    environment:
+      - NODE_ENV=development
