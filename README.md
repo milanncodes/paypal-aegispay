@@ -10,6 +10,16 @@
 
 ---
 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=QnwrlWVvFLQ" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.youtube.com/vi/QnwrlWVvFLQ/maxresdefault.jpg" alt="AegisPay Architecture Walkthrough & Live Demo" width="100%" style="max-width: 800px; border-radius: 8px;" />
+  </a>
+  <br />
+  <em>▶️ Click above to watch the AegisPay demonstration & walkthrough on YouTube</em>
+</p>
+
+---
+
 ## 1. Why AegisPay Matters (The Problem)
 
 In the global software contracting economy, two opposing frictions paralyze milestone settlement:
